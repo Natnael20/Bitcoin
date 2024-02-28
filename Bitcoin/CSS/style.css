@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: rgb(247, 143, 61);
+    --text-color: rgb(255, 255, 255);
+}
+
+.button1 {
+    background-color: #fff;
+}
+
+.button2 {
+    background-image:-webkit-linear-gradient(0deg, rgb(243, 196, 0) 0%, rgb(248, 136, 69) 100%);;
+    color: var(--text-color);
+    padding: 10px 30px;
+}
+
+#bg-img {
+    background: url("https://preview.colorlib.com/theme/bitcoin/img/header-bg.jpg.webp") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width:521px) {
+    #bg-img {
+        height: auto;
+    }
+}
+
+#bg-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(4, 9, 30, 0.85);
+    z-index: 0; /* Lower z-index to position behind .intro-content */
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.intro-content {
+    position: relative; /* Add position relative */
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.intro-content > p:nth-child(1) {
+    letter-spacing: 0.5em; /* Adjust the spacing as needed */
+}
+
+.intro-content h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1em;
+    margin-top: 20px;
+}
+
+#bitcoinData {
+    transition: opacity 0.5s ease; /* Define the transition */
+}
+
+.overlap {
+    position: relative;
+    top: -60px;
+    z-index: 2;
+}  
+
+.currency-converter {
+    background-image:-webkit-linear-gradient(0deg, rgb(243, 196, 0) 0%, rgb(248, 136, 69) 100%);;
+}
+
+.convert {
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.bitcoin-inputs {
+    padding: 80px;
+    display: grid;
+    place-content: center;
+}
+
+.bitcon-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 40px;
+}
+
+.inputs {
+    display: inline-block;
+    gap: 15px;
+}
+
+.inputs input {
+    margin-top: 5%;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color:inherit;
+    padding: 10px 10px;
+}
+
+.inputs input::placeholder {
+    color: var(--text-color);
+}
+
+.inputs input:focus, .inputs input:active {
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: #fff;
+}
+
+.bitcoin-inputs .btn {
+    background-color: #fff;
+    float: inline-end;
+    border-radius:50px;
+    border: 1px solid black;
+    font-weight: 500;
+}
+
+.bitcoin-flexibility {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.third-container {
+    padding: 0;
+    margin: 0;
+    margin-top: 5%;
+}
+
+.slider {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+    transform: translateX(100%);
+}
+
+/* ... (previous CSS code) */
+
+/* Dot navigation */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Highlight active dot */
+.active-dot {
+    background-color: #e74c3c;
+}
+
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.next {
+    transform: translateX(100%);
+}
+
+.slide.prev {
+    transform: translateX(-100%);
+}
+
+.forth-container {
+    margin-top: 10%;
+}
+
+.service-row {
+    margin-top: 10%;
+}
+
+.service-title {
+    display: inline-flex;
+    gap: 10px;
+}
+
+#fifth-container {
+    margin-top: 10%;
+    background-color: #f9f9ff;
+}
+
+#fifth-container > .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sixth-container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:-webkit-linear-gradient(0deg, rgb(243, 196, 0) 0%, rgb(248, 136, 69) 100%);;
+    padding: 30px 30px;
+    height: 80vh;
+    text-align: center;
+    color: #fff;
+}
+
+.seventh-container {
+    margin-top: 10%;
+}
+
+.buy-crypto {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.buy-crypto  section:nth-child(2) {
+    margin-top: 5em;
+    padding: 40px 30px;
+    transition: all .5s linear;
+}
+
+.buy-crypto section:nth-child(2) .btn {
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    padding: 10px  30px;
+}
+
+.buy-crypto:hover section:nth-child(2) {
+    background-image:-webkit-linear-gradient(0deg, rgb(243, 196, 0) 0%, rgb(248, 136, 69) 100%);;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.eighth-container {
+    margin-top: 10%;
+}
+
+.review {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    margin-top:2em;
+}
+
+.person-info {
+    display: grid;
+    justify-content: center;
+}
+
+#footer-container {
+    margin-top: 10%;
+    background-color: #04091e;
+
+}
+
+@media screen and (max-width: 768px) {
+    .last-container {
+        display: grid;
+    }
+}
+
+.sub-container {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+  }
+  
+  .sub-content {
+    width: 360px;
+    height: 40px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+    border-radius: 60px;
+    overflow: hidden;
+  }
+  
+  .subscription {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .subscription .add-email{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+  }
+  
+  .subscription .submit-email {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100% - 2px);
+    width: 100px;
+    border: none;
+    border-radius: 60px;
+    outline: none;
+    margin: 1px;
+    padding: 0 20px;
+    cursor: pointer;
+    background-image:-webkit-linear-gradient(0deg, rgb(243, 196, 0) 0%, rgb(248, 136, 69) 100%);;
+    color: #FFFFFF;
+    transition: width .35s ease-in-out,
+      background .35s ease-in-out;
+  }
+  
+  .subscription.done .submit-email {
+    width: calc(100% - 2px);
+    background: #C0E02E;
+  }
+  
+  .subscription .submit-email .before-submit,
+  .subscription .submit-email .after-submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 38px;
+    transition: visibility .35s ease-in-out,
+      opacity .35s ease-in-out;
+  }
+  
+  .subscription.done .submit-email .before-submit,
+  .subscription:not(.done) .submit-email .after-submit {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .subscription .submit-email .after-submit {
+    transition-delay: .35s;
+  }
+  
+  .subscription:not(.done) .submit-email .before-submit,
+  .subscription.done .submit-email .after-submit {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.links {
+    display: grid;
+    line-height: 2;
+}
+
+.links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.links a:hover, .products p a:hover {
+    color: var(--primary);
+}
+
+.form-group form {
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+  .footer-section form button {
+    margin-left: 5px;
+  }
+
+  .social a{
+        color: white;
+        padding: 10px 20px;
+        transition: all .5s linear;
+  }
+  
+  .social a:hover {
+        color: var(--primary);
+  }
